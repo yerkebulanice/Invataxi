@@ -22,11 +22,11 @@ dev_dependencies:
 
 flutter:
 
-
   uses-material-design: true
 
+
   assets:
-    - images/Kangoo_Van.png
+    - images/
 
   fonts:
     - family: Roboto
