@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'EntryPage.dart';
+
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -11,31 +13,27 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(36, 50, 36, 0),
+          padding: const EdgeInsets.fromLTRB(28, 40, 28, 35),
           child: Container(
             width: double.infinity,
-            // color: Colors.yellow,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Container(
-                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
-                        children: [
+                        children: <Widget>[
                           Text(
                             'ИНВАТАКСИ',
                             style: TextStyle(
                               color: Color(0xFF444444),
                               fontFamily: 'Aqum',
-                              fontSize: 46,
+                              fontSize: 42,
                             ),
                           ),
                           SizedBox(
-                            height: 12,
+                            height: 15,
                           ),
                           Text(
                             'Войти',
@@ -77,7 +75,9 @@ class _LoginPageState extends State<LoginPage> {
                             height: 42,
                             width: 120,
                             child: TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => EntryPage()));
+                              },
                               style: ButtonStyle(
                                 backgroundColor:
                                     MaterialStateProperty.all<Color>(
@@ -95,35 +95,28 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                           SizedBox(
-                            height: 20,
+                            height: 24,
                           ),
                           Center(
                             child: Text(
                               'Нажимая кнопку «Войти», вы принимаете Пользовательское соглашение «Инватакси»',
                               style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 13,
                               ),
                               textAlign: TextAlign.center,
                             ),
                           )
                         ],
                       ),
-                      SizedBox(
-                        height: 270,
-                      ),
                       Image(
                         image: AssetImage(
                           'images/kangoo.png',
                         ),
                         fit: BoxFit.fill,
-                        height: 210,
-                        width: 400,
+                        width: 350,
                       ),
                     ],
                   ),
-                ),
-              ],
-            ),
           ),
         ),
       ),

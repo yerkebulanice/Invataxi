@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_app/LoginPage.dart';
+
+import 'EntryPage.dart';
 
 class RegistrationPage extends StatefulWidget {
   @override
@@ -11,203 +14,223 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      // appBar: AppBar(),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(36, 50, 36, 0),
+          padding: const EdgeInsets.fromLTRB(24, 40, 24, 35),
           child: Container(
             width: double.infinity,
             // color: Colors.yellow,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  child: Column(
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            'ИНВАТАКСИ',
-                            style: TextStyle(
-                              color: Color(0xFF444444),
-                              fontFamily: 'Aqum',
-                              fontSize: 46,
-                            ),
+                Column(
+                  children: <Widget>[
+                    Text(
+                      'ИНВАТАКСИ',
+                      style: TextStyle(
+                        color: Color(0xFF444444),
+                        fontFamily: 'Aqum',
+                        fontSize: 42,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      'Регистрация',
+                      style: TextStyle(
+                          fontFamily: 'MyriadPro-SemiCn',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                      ),
+                    ),
+                    TextField(
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: '+7(',
+                        hintStyle: TextStyle(
+                          fontSize: 20,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          value1 = value;
+                        });
+                      },
+                    ),
+                    TextField(
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: 'Телефон сопровождения',
+                        hintStyle: TextStyle(
+                          fontSize: 20,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          value1 = value;
+                        });
+                      },
+                    ),
+                    TextField(
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: 'ИИН',
+                        hintStyle: TextStyle(
+                          fontSize: 20,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          value1 = value;
+                        });
+                      },
+                    ),
+                    TextField(
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                      textAlign: TextAlign.center,
+                      decoration: InputDecoration(
+                        hintText: 'Группа инвалидности',
+                        hintStyle: TextStyle(
+                          fontSize: 20,
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                          BorderSide(color: Color(0xFF7AC41B)),
+                        ),
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          value1 = value;
+                        });
+                      },
+                    ),
+                    SizedBox(height: 8,),
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      // color: Colors.teal,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Text('Пожалуйста прикрепите фото удостоверения', style: TextStyle(fontSize: 13,),),
+                          InkWell(
+                            onTap: (){},
+                            child:  Text('Прикрепить', style: TextStyle(fontSize: 13, color: Colors.green),),
                           ),
-                          SizedBox(
-                            height: 12,
+                          Text('Справка 035-1/y', style: TextStyle(fontSize: 13),),
+                          InkWell(
+                            onTap: (){},
+                            child:  Text('Прикрепить', style: TextStyle(fontSize: 13,color: Colors.green,),),
                           ),
-                          Text(
-                            'Регистрация',
-                            style: TextStyle(
-                              fontFamily: 'MyriadPro-SemiCn',
-                              fontWeight: FontWeight.bold,
-                              fontSize: 24,
-                            ),
-                          ),
-                          TextField(
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                              hintText: '+7(',
-                              hintStyle: TextStyle(
-                                fontSize: 20,
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                            ),
-                            onChanged: (value) {
-                              setState(() {
-                                value1 = value;
-                              });
-                            },
-                          ),
-                          TextField(
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                              hintText: '+7(',
-                              hintStyle: TextStyle(
-                                fontSize: 20,
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                            ),
-                            onChanged: (value) {
-                              setState(() {
-                                value1 = value;
-                              });
-                            },
-                          ),
-                          TextField(
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                              hintText: '+7(',
-                              hintStyle: TextStyle(
-                                fontSize: 20,
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                            ),
-                            onChanged: (value) {
-                              setState(() {
-                                value1 = value;
-                              });
-                            },
-                          ),
-                          TextField(
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                            textAlign: TextAlign.center,
-                            decoration: InputDecoration(
-                              hintText: '+7(',
-                              hintStyle: TextStyle(
-                                fontSize: 20,
-                              ),
-                              enabledBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                              focusedBorder: UnderlineInputBorder(
-                                borderSide:
-                                    BorderSide(color: Color(0xFF7AC41B)),
-                              ),
-                            ),
-                            onChanged: (value) {
-                              setState(() {
-                                value1 = value;
-                              });
-                            },
-                          ),
-                          SizedBox(
-                            height: 8,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Пожалуйста, прикрепите фото удостоверения',
-                                style: TextStyle(fontSize: 12),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 30,
-                          ),
-                          SizedBox(
-                            height: 42,
-                            width: 120,
-                            child: TextButton(
-                              onPressed: () {},
-                              style: ButtonStyle(
-                                backgroundColor:
-                                    MaterialStateProperty.all<Color>(
-                                  Color(0xFFFFE472),
-                                ),
-                              ),
-                              child: Text(
-                                'Войти',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 18,
-                                  fontFamily: 'Roboto-Regular',
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Center(
-                            child: Text(
-                              'Нажимая кнопку «Войти», вы принимаете Пользовательское соглашение «Инватакси»',
-                              style: TextStyle(
-                                fontSize: 14,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          )
                         ],
                       ),
-                      SizedBox(
-                        height: 270,
-                      ),
-                      Image(
-                        image: AssetImage(
-                          'images/kangoo.png',
+                    ),
+                    SizedBox(height: 8,),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Icon(Icons.visibility_outlined, size: 40,),
+                        SizedBox(width: 8,),
+                        SizedBox(
+                          height: 42,
+                          width: 100,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
+                            },
+                            style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all<Color>(
+                                Color(0xFFFFE472),
+                              ),
+                            ),
+                            child: Text(
+                              'Войти',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontFamily: 'Roboto-Regular',
+                              ),
+                            ),
+                          ),
                         ),
-                        fit: BoxFit.fill,
-                        height: 210,
-                        width: 400,
-                      ),
-                    ],
+                        SizedBox(width: 8,),
+                        SizedBox(
+                          height: 42,
+                          // width: 120,
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => EntryPage()));
+                            },
+                            style: ButtonStyle(
+                              backgroundColor:
+                              MaterialStateProperty.all<Color>(
+                                Color(0xFFFFE472),
+                              ),
+                            ),
+                            child: Text(
+                              'Заригистроваться',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18,
+                                fontFamily: 'Roboto-Regular',
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Image(
+                  image: AssetImage(
+                    'images/kangoo.png',
                   ),
+                  fit: BoxFit.fill,
+                  width: 350,
                 ),
               ],
             ),
